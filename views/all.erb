@@ -1,0 +1,23 @@
+<audio controls autoplay>
+  <source src="sounds/pokemon-theme.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+<a href="all/new" class = "pokemon">Catch a Pokemon!</a>
+</nav>
+
+<main>
+  <% @pokemon.each do |pokemon| %>
+  <div class = "pokemon">
+    <img src = "<%= pokemon.img_url %>">
+    <h3>
+      <a href="/all/<%= pokemon.id %>"><%= pokemon.name %></a>
+    </h3>
+    <form action="/all/<%= pokemon.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button" type="submit" name="name" value="Release to Wild!">
+    </form>
+  </div>
+  <% end %>
+
+</main>

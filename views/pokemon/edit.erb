@@ -1,0 +1,20 @@
+
+<nav>
+<a href="/all" class = "pokemon">Pokedex</a>
+</nav>
+
+
+<main class = "pokemon">
+    <img src = "<%= @thispokemon.img_url %>">
+    <form action="/all/<%= @thispokemon.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <h2>Name: <input name="pokemon[name]" value="<%= @thispokemon.name %>"></h2>
+    <h2>CP: <input name="pokemon[cp]" value="<%= @thispokemon.cp %>"></h2>
+    <h2>Poke-Type: <input name="pokemon[poke_type]" value="<%= @thispokemon.poke_type %>"></h2>
+    <h2>Image <input name="pokemon[img_url]" value="<%= @thispokemon.img_url %>"></h2>
+
+    <input type="submit" value="Ready to Evolve?">
+
+    </form>
+</main>
