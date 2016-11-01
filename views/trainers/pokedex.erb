@@ -1,0 +1,23 @@
+<nav>
+<a href="/trainers" class="pokemon">All Trainers!</a>
+</nav>
+
+<main>
+  <div class="pokemon">
+
+  <% @trainer.owned_pokemons.each do |ownpoke| %>
+    <div class="pokedex">
+    <img src="<%= ownpoke.pokemon.img_url %>">
+    <h3>
+      <%= ownpoke.pokemon.name %>
+    </h3>
+    <form action="/trainers/<%= ownpoke.trainer.id %>/<%= ownpoke.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button" type="submit" name="name" value="Release to Wild!">
+    </form>
+  </div>
+  <% end %>
+  </div>
+
+
+</main>

@@ -3,17 +3,17 @@
 </audio>
 
 <main>
-  <div class="pokemon">
   <% @trainers.each do |trainer| %>
-
+  <div class="pokemon">
     <img src="<%= trainer.img_url %>">
-    <h3>
       <h2><%= trainer.name %></h2>
       <h3>Level: <%= trainer.level %></h3>
-        <a href="/trainers/<%= trainer.id %>/pokedex" class = "pokemon"><%= trainer.name %>'s Pokedex!</a>
-    </h3><br/><br/>
-    <hr>
-  <% end %>
+      <h3>Team: <%= trainer.team.name %></h3>
+    
+      <h5><a href="/trainers/<%= trainer.id %>/pokedex" class = "pokemon"><%= trainer.name %>'s Pokedex!</a></h5>
+    <br/><br/>
     </div>
+      <% end %>
+
 
 </main>
