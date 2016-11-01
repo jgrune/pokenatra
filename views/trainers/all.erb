@@ -1,0 +1,19 @@
+<audio controls autoplay>
+  <source src="sounds/pokemon-theme.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+  <div class="pokemon">
+  <% @trainers.each do |trainer| %>
+
+    <img src="<%= trainer.img_url %>">
+    <h3>
+      <h2><%= trainer.name %></h2>
+      <h3>Level: <%= trainer.level %></h3>
+        <a href="/trainers/<%= trainer.id %>/pokedex" class = "pokemon"><%= trainer.name %>'s Pokedex!</a>
+    </h3><br/><br/>
+    <hr>
+  <% end %>
+    </div>
+
+</main>

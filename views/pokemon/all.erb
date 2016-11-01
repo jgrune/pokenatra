@@ -3,13 +3,13 @@
 </audio>
 
 <nav>
-<a href="all/new" class = "pokemon">Catch a Pokemon!</a>
+<a href="all/new" class="pokemon">Catch a Pokemon!</a>
 </nav>
 
 <main>
   <% @pokemon.each do |pokemon| %>
-  <div class = "pokemon">
-    <img src = "<%= pokemon.img_url %>">
+  <div class="pokemon">
+    <img src="<%= pokemon.img_url %>">
     <h3>
       <a href="/all/<%= pokemon.id %>"><%= pokemon.name %></a>
     </h3>

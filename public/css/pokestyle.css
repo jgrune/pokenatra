@@ -11,6 +11,19 @@ audio {
   display: none
 }
 
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+width: 40px;
+margin: 80px auto;
+text-align: center;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -56,12 +69,14 @@ div {
 }
 
 img {
-  max-height:200px;
+  height:200px;
   max-width: 200px;
 }
 
 body {
-  background-image: url(../images/pokedex.png);
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: bottom;
   background-attachment: fixed;
   background-repeat: no-repeat;
   font-family: "Pokemon", monospace;
@@ -90,7 +105,7 @@ a:hover {
 
 .pokemon{
   min-width: 375px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   margin: 40px;
   box-sizing: border-box;
@@ -101,6 +116,7 @@ a:hover {
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
 }
+
 
 @keyframes pulse {
   0% {

@@ -3,9 +3,10 @@
 </nav>
 
 <main class = "pokemon">
-    <img src = "<%= @thispokemon.img_url %>">
+    <img src = "<%= @thispokemon.img_url %>"><br/><br/>
+      <a href="/all/<%= @thispokemon.id %>/edit" class = "pokemon">Evolve!</a>
     <h2>Name: <%= @thispokemon.name %></h2>
     <h2>CP: <%= @thispokemon.cp %></h2>
     <h2>Poke-Type: <%= @thispokemon.poke_type %></h2>
+
 </main>
-<a href="/all/<%= @thispokemon.id %>/edit" class = "pokemon">Evolve!</a>
